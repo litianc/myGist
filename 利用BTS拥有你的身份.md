@@ -55,9 +55,6 @@
 
 ### 介绍 BitShares ID（也叫作 BitID）
 
-The BitShares ID system eliminates the need for a Certificate Authority and replaces it with a new kind of block-chain which is secured by proof-of-work in a manner similar to Bitcoin. When you download the BitShares client and start it up for the first time, it will join the BitShares network and start synchronizing with the global name-chain by downloading it to your local computer. You would then select a user name of your choice and the client would check to make sure it is not in use. After selecting your name, your client will starting doing the proof-of-work required to enter your name in the name-chain with everyone else. Like Bitcoin, this process takes some time to both mine and be confirmed by other peers on the network. Within a reasonable period of time your computer will have finished reserving your name and having it confirmed by the network.
-From this point you are ready to start texting, emailing, and trading with your friends. To send a friend a message all you need to do is know their BitShares ID user name. This information is easily exchanged over the phone or other traditional communication channels and readily understood by everyone. Enter their name in the ‘to field’, type your message, and click send.
-
 Bitshares ID 系统消除了对认证机构的需要，取代它的是一种新的、类似 Bitcoin 的工作量证明机制的区块链。当你下载的 BitShares 客户端并第一次使用时，它将加入 BitShares 网络并开始与全球姓名链同步下载到本地计算机。然后，您将选择您选择的用户名，客户端将检查以确保它不是已被使用。在选择你的名字之后，你的客户将开始做与其他人在名字链中输入你名字所需的工作证明。和 Bitcoin 一样，这一过程需要一些时间，同时也需要网络上其他同事的确认。在一段合理的时间内，您的计算机将完成您的名字并由网络确认。        
 
 从这一点开始，你就可以开始发短信，发邮件，和你的朋友进行交易了。送朋友一个消息，所有你需要做的是了解自己的 BitShares ID 用户名。这些信息很容易通过电话或其他传统的交流渠道进行交流，并且容易被每个人理解。在“发送到”中输入他们的名字，键入消息，然后单击发送。 
