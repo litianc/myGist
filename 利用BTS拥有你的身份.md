@@ -2,7 +2,9 @@
 翻译自：http://bytemaster.github.io/article/2013/08/28/Own-Your-Identity-with-BitShares/
 
 > 作者：BM（Daniel Larimer on  August 28, 2013）
+>
 > 翻译&校对：[litianc](https://twitter.com/BJTUTC)
+>
 > 阅读时长：3分钟
 
 **谁真正拥有你的在线身份？我可以向你保证，你所感知到的任何所有权都是一种错觉，最终你的网络身份现在还没有得到你的控制。
