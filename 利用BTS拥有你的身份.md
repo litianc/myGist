@@ -1,6 +1,8 @@
 # 利用 BTS 拥有你的身份
 翻译自：http://bytemaster.github.io/article/2013/08/28/Own-Your-Identity-with-BitShares/
 
+> 作者：BM（Daniel Larimer on  August 28, 2013）
+> 翻译&校对：[litianc](https://twitter.com/BJTUTC)
 > 阅读时长：3分钟
 
 **谁真正拥有你的在线身份？我可以向你保证，你所感知到的任何所有权都是一种错觉，最终你的网络身份现在还没有得到你的控制。
@@ -10,7 +12,7 @@
 最终，谷歌、苹果、雅虎和其他人拥有你的网络身份，就像你可以信任任何一家公司一样，这些公司可以被你不信任的政府武装起来。
 但是，即使你对这些公司和政府有完全的信心，这种模式下提供的担保也是如此之差，以至于每天都有大量的账户受到损害。**
 
-它是像这样的问题，bitshares社区已着眼于解决。
+它是像这样的问题，bitshares 社区已着眼于解决。
 受比特币协议的启发，我们正在开发的技术将帮助您控制您的身份、金融和通信，同时消除大多数形式的身份盗窃。
 
 人们普遍认为，安全性和易用性总是处于矛盾之中。
@@ -46,34 +48,38 @@
 不幸的是，交换信息只是问题的一部分，另一部分是验证所提供的信息。
 如果有人在电子邮件中为你提供乔尼的公钥，你怎么能信任它呢？ 
 
-The traditional solution is to use centralized Certificate Authorities that handle the complex task of verifying that the ‘owner’ of an email really does control the private key. Unfortunately, this solution has once again removed your control over your identity and given both the Certificate Authority (CA) and your e-mail provider control over your online identity. You can be sure that the NSA can forge signatures from a CA. Even without worrying about the NSA, the CA system is only as secure as the least secure company you implicitly trust.
+传统的解决方案是使用中心化的证书颁发机构来处理验证电子邮件确实控制的“所有者”私钥这种复杂的任务。
+不幸的是,这个解决方案再次让你失去你的身份的控制，将它给予的证书颁发机构(CA)和您的电子邮件提供商控制你的线上身份。
+可以肯定的是,美国国家安全局可以利用 CA 伪造签名。
+即使没有担心美国国家安全局, CA 系统安全是最安全的公司也是隐含的信任基础。
 
-### Introducing BitShares ID (aka BitID)
+### 介绍 BitShares ID（也叫作 BitID）
 
 The BitShares ID system eliminates the need for a Certificate Authority and replaces it with a new kind of block-chain which is secured by proof-of-work in a manner similar to Bitcoin. When you download the BitShares client and start it up for the first time, it will join the BitShares network and start synchronizing with the global name-chain by downloading it to your local computer. You would then select a user name of your choice and the client would check to make sure it is not in use. After selecting your name, your client will starting doing the proof-of-work required to enter your name in the name-chain with everyone else. Like Bitcoin, this process takes some time to both mine and be confirmed by other peers on the network. Within a reasonable period of time your computer will have finished reserving your name and having it confirmed by the network.
 From this point you are ready to start texting, emailing, and trading with your friends. To send a friend a message all you need to do is know their BitShares ID user name. This information is easily exchanged over the phone or other traditional communication channels and readily understood by everyone. Enter their name in the ‘to field’, type your message, and click send.
 
-的bitshares ID系统消除了对认证机构的需要，一种新的块链是由类似于比特币的工作证明担保类取代它。当你下载的bitshares客户端并开始了第一次，它将加入bitshares网络并开始与全球姓名链同步下载到本地计算机。然后，您将选择您选择的用户名，客户机将检查以确保它不在使用中。在选择你的名字之后，你的客户将开始做与其他人在名字链中输入你名字所需的工作证明。和Bitcoin一样，这一过程需要一些时间，同时也需要网络上其他同事的确认。在一段合理的时间内，您的计算机将完成您的名字并由网络确认。        
+Bitshares ID 系统消除了对认证机构的需要，取代它的是一种新的、类似 Bitcoin 的工作量证明机制的区块链。当你下载的 BitShares 客户端并第一次使用时，它将加入 BitShares 网络并开始与全球姓名链同步下载到本地计算机。然后，您将选择您选择的用户名，客户端将检查以确保它不是已被使用。在选择你的名字之后，你的客户将开始做与其他人在名字链中输入你名字所需的工作证明。和 Bitcoin 一样，这一过程需要一些时间，同时也需要网络上其他同事的确认。在一段合理的时间内，您的计算机将完成您的名字并由网络确认。        
 
-从这一点开始，你就可以开始发短信，发邮件，和你的朋友进行交易了。送朋友一个消息，所有你需要做的是了解自己的bitshares ID用户名。这些信息很容易通过电话或其他传统的交流渠道进行交流，并且容易被每个人理解。在“到字段”中输入他们的名字，键入消息，然后单击发送。 
+从这一点开始，你就可以开始发短信，发邮件，和你的朋友进行交易了。送朋友一个消息，所有你需要做的是了解自己的 BitShares ID 用户名。这些信息很容易通过电话或其他传统的交流渠道进行交流，并且容易被每个人理解。在“发送到”中输入他们的名字，键入消息，然后单击发送。 
 
-As you can see, communicating within the BitShares ecosystem will be even easier than traditional email. There is no company to sign-up with, no certificate authority to pay, and no mail server configuration to manage. Despite being even easier to use than traditional unencrypted email, it is also several orders of magnitude more secure than even the most carefully setup and configured secure mail system available today.
-There are several reasons why BitShares communication is more secure than anything on the market. The first reason is that 100% of the message is encrypted, including the sender and receiver. No one is able to collect the meta data on your e-mails and use that information to discover your social network. Second, there are no trusted third parties such as e-mail providers or Certificate Authorities with the power to compromise your account and impersonate you. Third, it is so easy to use that it will be much harder for users to accidentally compromise their security.
+你可以看到，使用 BitShares 生态系统沟通将比传统的电子邮件更容易。不需要向任何公司注册，没有证书颁发机构，也没有邮件服务器配置来管理。尽管使用比传统的未加密的电子邮件更容易，也比当前可以用到的最精心的设置和配置的安全邮件系统更安全的比几个数量级。 
 
-你可以看到，内部沟通的bitshares生态系统将比传统的电子邮件更容易。没有要注册的公司，没有证书颁发机构，也没有邮件服务器配置来管理。尽管使用比传统的未加密的电子邮件更容易，也更安全的比几个数量级甚至最精心的设置和配置的安全邮件系统可用的今天。 
+BitShares 通信比市场上的任何东西更安全有以下几个原因。第一个原因是消息是 100% 加密的，包括发送方和接收方。没有人能够收集你的电子邮件上的元数据（meta data），并利用这些信息来发现你的社交网络。其次，不需要可信的、有权进入你的账户和冒充你的第三方(3rd party)，如电子邮件提供商或证书颁发机构。第三，它是如此容易使用，同时对用户来说也不会让步他们的安全。 
 
-还有为什么bitshares沟通比市场上的任何东西更安全的几个原因。第一个原因是100%的消息是加密的，包括发送方和接收方。没有人能够收集你的电子邮件上的元数据，并利用这些信息来发现你的社交网络。其次，没有可信的第三方如电子邮件提供商或证书颁发机构的权力妥协你的账户冒充你。第三，它是如此容易使用，这将是更加困难的用户无意中危及他们的安全。 
+### 集成的钱包
 
-### Integrated Wallet
+除了控制你的身份和通信，BitShares 还会通过比特币及其他虚拟货币让你控制你的钱像使用 Paypal 一样容易，甚至比今天的比特币更安全。
+通过使用 BitShares ID 系统和通信系统，自动地与你联系名单上的每个人交涉付款地址成为可能。
+在 BitShares 钱包界面，用户将不会看到一个比特币地址又因为寄钱给某人简直是像发送电子邮件一样易如反掌。
+选择联系人，输入金额，单击发送。
+在商业中使用比特币困难的一个重要因素是，你必须采用外国定价制度，应对非常不稳定的价格。
+这使得它很难定价和作出购买决定。
+BitShares 解决这种易用性挑战，通过创建 BitAssets，如 BitUSD、BitEUR 或 BitGold。用户将能够使用一个熟悉单位的加密货币，并比市场上任何其他系统更安全、更隐蔽、更快捷地使用它。
+这将使加密货币如此易于使用和熟悉，易用性将不再是一个限制因素采用。 
 
-In addition to putting you in control of your identity and communication, BitShares will put you in control of your money by making Bitcoin and other crypto-currencies as easy to use as Paypal while being more secure than even Bitcoin is today. This is made possible by using the BitShares ID system and communication system to automatically and securely negotiate payment address with everyone on your contact list. Users of the BitShares Wallet interface will never have to see a Bitcoin address again because sending money to someone is literally as easy as sending them an e-mail. Select a contact, enter an amount, click send.
-A significant factor in the difficulty of using Bitcoin in commerce is that you must adopt a foreign pricing system and deal with very volatile prices. This makes it difficult to interpret prices and make purchasing decisions. BitShares solves this ease-of-use challenge through by creating BitAssets such as BitUSD, BitEUR or BitGold. Users will be able to use a crypto-currency denominated in a familiar unit and spend it more securely, privately, and quickly than any other system on the market. This will make crypto-currencies so easy to use and familiar that ease of use will no longer be a limiting factor to adoption.
-
-除了把你的身份和通信控制，bitshares会让你控制你的钱通过比特币及其他虚拟货币的容易使用贝宝，甚至比今天更安全的比特币。这是通过使用bitshares ID系统和通信系统自动地协商付款地址与你联系名单上的每个人都成为可能。该bitshares钱包界面用户将不会看到一个比特币地址又因为寄钱给某人简直是易如反掌发送电子邮件。选择联系人，输入金额，单击发送。              在商业中使用比特币困难的一个重要因素是，你必须采用外国定价制度，应对非常不稳定的价格。这使得它很难解释价格和作出购买决定。bitshares解决这种易用性挑战，通过创建bitassets如BitUSD、BitEUR或bitgold。用户将能够使用一个熟悉单位的加密货币，并比市场上任何其他系统更安全、更隐蔽、更快捷地使用它。这将使加密货币如此易于使用和熟悉，易于使用将不再是一个限制因素采用。 
-
-### Owning Your Identity
-
-With BitShares ID and the surrounding ecosystem it will become feasible for you and Johnny to finally take control of your online identity. With relatively straightforward integration, companies can enable you to use your BitShares ID to provide ‘single-sign-on’ for the entire internet. You will no longer have to trust any business to protect your personal information and most businesses will no longer even need to collect it. The result is that identity theft and the resulting financial, credit, and reputation theft will become much less common and no longer within reach of every scammer with a phishing site.
-
-与bitshares ID和周围的生态系统将成为可行的你和杜琪峰终于能够控制你的网上身份。相对简单的集成，企业可以让你使用你的bitshares ID提供单点登录的整个互联网。您将不再需要信任任何业务来保护您的个人信息，大多数企业将不再需要收集它。结果是，身份盗窃和由此带来的金融、信用、信誉盗窃将在每一个钓鱼网站达到骗子变得更为普通，不再。 
+### 拥有你的身份
+通过 Bitshares ID 和其周围的生态系统，你和 Johnny 终于能够控制你的线上身份。
+相对简单的集成，企业可以让你使用你的 BitShares ID 提供单点登录（SSO）的整个互联网。
+您将不再需要信任任何业务来保护您的个人信息，大多数企业将不再需要收集它。
+结果是，身份盗窃和由此带来的金融、信用、信誉盗窃将变得更少，不再担心为登录每个网站都进行一次防钓鱼扫描。
 
